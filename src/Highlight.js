@@ -6,7 +6,7 @@ class Highlight extends Component {
         return (
         <div className='highlight'>
             <img src={require(`${this.props.image}`)} className='image'/>
-            <h3>{this.props.name}</h3>
+            <h3 className='highlightTitle'>{this.props.name}</h3>
             <p>{this.props.text}</p>
         </div>
         )

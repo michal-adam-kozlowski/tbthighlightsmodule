@@ -4,9 +4,24 @@
   font-size: 20px;
   margin: 10px;
   display: inline-block;
+  border-radius: 25px;
+  position: relative;
 }
 
 .highlightImg {
   width: 200px;
   height: 200px;
+}
+
+.highlightTitle {
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 80%;
+  text-align: center;
+  width: 80%;
+  color: white;
 }
