@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Highlight from './Highlight.js';
 import './HighlightsWrapper.scss';
 import $ from 'jquery';
+import Popup from "./HighlightPopup";
 
 var highlightsArr = [
     {
@@ -81,11 +82,19 @@ var highlightsArr = [
 
 class HighlightsWrapper extends Component {
 
-    constructor(){
-        super();
-        this.scroll = this.scroll.bind(this)
+    constructor(props){
+        super(props);
+        this.scroll = this.scroll.bind(this);
+        // here is the popup state
+        this.state = { showPopup: false };
+        this.togglePopup = this.togglePopup.bind(this);
     }
-
+        // function to toggle popup
+    togglePopup() {
+        this.setState({
+            showPopup: !this.state.showPopup,
+        });
+    }
 
     scroll(direction){
         let far = $( '.image-container' ).width()/1*direction;
@@ -100,11 +109,20 @@ class HighlightsWrapper extends Component {
                     <a className="prev" onClick={this.scroll.bind(null,-1)}>&#10094;</a>
                 <div className="image-container">
                     {highlightsArr.map((el) =>
-                     <Highlight name={el.name} image={el.image} text={el.text}/>
-                    )}
+                     <Highlight showPopupState ={this.state.showPopup} togglePopup={this.togglePopup} name={el.name} image={el.image} text={el.text}/>
+
+                     )}
+
                 </div>
                     <a className="next" onClick={this.scroll.bind(null,1)}>&#10095;</a>
                 </div>
+                {this.state.showPopup ?
+                    <Popup
+                        text='Click "Close Button" to hide popup'
+                        closePopup={this.togglePopup.bind(this)}
+                    />
+                    : null
+                }
             </div>
         )
     }
