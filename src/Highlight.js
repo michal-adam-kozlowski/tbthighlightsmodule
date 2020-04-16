@@ -4,25 +4,36 @@ import Popup from "./HighlightPopup";
 
 class Highlight extends Component {
 
-    state = {
-        info : this.props.text
-    };
+    constructor(props){
+        super(props);
+        // here is the popup state
+        this.state = {
+            showPopup: false,
+        };
+        this.togglePopup = this.togglePopup.bind(this);
+    }
+    // function to toggle popup
+    togglePopup() {
+        this.setState({
+            showPopup: !this.state.showPopup,
+        });
+    }
 
     render () {
-        console.log(this.state.info);
+        console.log(this.state.showPopup);
 
         return (
         <div className='highlight'
-             onClick={() => this.props.togglePopup(this.props.state)}
+             onClick={() => this.togglePopup()}
         >
             <img src={require(`${this.props.image}`)} className='image'/>
-            <h3 className='highlightTitle'>{this.props.name}</h3>
-            {this.props.showPopupState ?
+            <p className='highlightTitle'>{this.props.name}</p>
+            {this.state.showPopup ?
                 <Popup
                     text='Click "Close Button" to hide popup'
                     closePopup={this.togglePopup}
                     name={this.props.name}
-                    info={this.state.info}
+                    info={this.props.info}
                 />
                 : null
             }

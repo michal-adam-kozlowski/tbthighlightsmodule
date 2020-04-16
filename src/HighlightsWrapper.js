@@ -8,72 +8,131 @@ var highlightsArr = [
     {
         name : 'Koncerty',
         image : './img/koncerty.jpg',
-        text : 'Przygotowujemy dla Was mnóstwo muzycznych wrażeń w trakcie wyjazdu. W ramach części festiwalowej wystpią dla Was na żywo wybrani artyści z Polski.'
+        text : 'Przygotowujemy dla Was mnóstwo muzycznych wrażeń w trakcie wyjazdu. W ramach części festiwalowej wystpią dla Was na żywo wybrani artyści z Polski.',
+        tagParty : true,
+        tagActivities : false,
+        tagSightseeing : false
+
     },
     {
         name : 'Windsurfing',
         image : './img/windsurfing.jpg',
-        text : 'Kursy Wind'
+        text : 'Kursy Wind',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Kitesurfing',
         image : './img/kitesurfing.jpg',
-        text : 'Kursy Kite'
+        text : 'Kursy Kite',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Diving',
         image : './img/diving.jpg',
-        text : 'Diving'
+        text : 'Diving',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'SUP',
         image : './img/sup.jpg',
-        text : 'SUP'
+        text : 'SUP',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Wakebaording',
         image : './img/wakeboarding.jpg',
-        text : 'Wakeboarding'
+        text : 'Wakeboarding',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Longboarding',
         image : './img/longboarding.jpg',
-        text : 'Longboarding'
+        text : 'Longboarding',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Beach Parties',
         image : './img/beachparty.jpg',
-        text : 'Beach Parties'
+        text : 'Beach Parties',
+        tagParty : true,
+        tagActivities : false,
+        tagSightseeing : false
     },
     {
         name : 'Club Parties',
         image : './img/clubparty.jpg',
-        text : 'Club Parties'
+        text : 'Club Parties',
+        tagParty : true,
+        tagActivities : false,
+        tagSightseeing : false
     },
     {
         name : 'Cooking Workshops',
         image : './img/cookingworkshops.jpg',
-        text : 'Cooking Workshops'
+        text : 'Cooking Workshops',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
+    },
+    {
+        name : 'Korcula Trip',
+        image : './img/splashofcolours.jpg',
+        text : 'Wycieczka na słoneczną Korculę',
+        tagParty : false,
+        tagActivities : false,
+        tagSightseeing : true
     },
     {
         name : 'Poker Night',
         image : './img/pokernight.jpg',
-        text : 'Poker Night'
+        text : 'Poker Night',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Sea Kayaks',
         image : './img/seakayak.jpg',
-        text : 'Sea Kayaks'
+        text : 'Sea Kayaks',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Rowery Embassy',
         image : './img/roweryembassy.jpg',
-        text : 'Rowery Embassy'
+        text : 'Rowery Embassy',
+        tagParty : false,
+        tagActivities : true,
+        tagSightseeing : false
     },
     {
         name : 'Splash of Colours',
         image : './img/splashofcolours.jpg',
-        text : 'Splash of Colours'
+        text : 'Splash of Colours',
+        tagParty : true,
+        tagActivities : false,
+        tagSightseeing : false
+    },
+    {
+        name : 'Dubrovnik Trip',
+        image : './img/splashofcolours.jpg',
+        text : 'Wycieczka do cudownego Dubrovnika',
+        tagParty : false,
+        tagActivities : false,
+        tagSightseeing : true
     },
 
 ];
@@ -86,16 +145,6 @@ class HighlightsWrapper extends Component {
         super(props);
         this.scroll = this.scroll.bind(this);
         // here is the popup state
-        this.state = {
-            showPopup: false,
-        };
-        this.togglePopup = this.togglePopup.bind(this);
-    }
-        // function to toggle popup
-    togglePopup() {
-        this.setState({
-            showPopup: !this.state.showPopup,
-        });
     }
 
 
@@ -110,16 +159,20 @@ class HighlightsWrapper extends Component {
         return (
             <div className='main'>
                 <div className='wrapper'>
-                    <a className="prev" onClick={this.scroll.bind(null,-1)}>&#10094;</a>
+
+                    <div className='blockLeft'></div>
+                    <div className="prev" onClick={this.scroll.bind(null,-1)}>&#10094;</div>
                 <div className="image-container">
                     {highlightsArr.map((el) =>
-                     <Highlight showPopupState ={this.state.showPopup} togglePopup={this.togglePopup} name={el.name} image={el.image} text={el.text}/>
+                     <Highlight name={el.name} image={el.image} info={el.text}/>
 
                      )}
 
                 </div>
-                    <a className="next" onClick={this.scroll.bind(null,1)}>&#10095;</a>
+                    <div className="next" onClick={this.scroll.bind(null,1)}>&#10095;</div>
+                    <div className='blockRight'></div>
                 </div>
+
             </div>
         )
     }
