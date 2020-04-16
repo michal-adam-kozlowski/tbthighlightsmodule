@@ -86,7 +86,9 @@ class HighlightsWrapper extends Component {
         super(props);
         this.scroll = this.scroll.bind(this);
         // here is the popup state
-        this.state = { showPopup: false };
+        this.state = {
+            showPopup: false,
+        };
         this.togglePopup = this.togglePopup.bind(this);
     }
         // function to toggle popup
@@ -95,6 +97,8 @@ class HighlightsWrapper extends Component {
             showPopup: !this.state.showPopup,
         });
     }
+
+
 
     scroll(direction){
         let far = $( '.image-container' ).width()/1*direction;
@@ -116,13 +120,6 @@ class HighlightsWrapper extends Component {
                 </div>
                     <a className="next" onClick={this.scroll.bind(null,1)}>&#10095;</a>
                 </div>
-                {this.state.showPopup ?
-                    <Popup
-                        text='Click "Close Button" to hide popup'
-                        closePopup={this.togglePopup.bind(this)}
-                    />
-                    : null
-                }
             </div>
         )
     }
