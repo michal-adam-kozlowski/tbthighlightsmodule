@@ -26,6 +26,16 @@
 
 }
 
+.higlightsMenuTagsActive {
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  color: red;
+}
+
 .higlightsMenuTags:hover {
   opacity: 0.7;
   transition: opacity .3s ease-in-out;

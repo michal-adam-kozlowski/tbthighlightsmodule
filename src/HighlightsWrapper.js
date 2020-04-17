@@ -180,8 +180,8 @@ class HighlightsWrapper extends Component {
             return (
                 <div className='main'>
                     <div className='highlightsMenu'>
-                        <div className='higlightsMenuTags' onClick={this.handleAll}>All</div>
-                        <div className='higlightsMenuTags' onClick={this.handleParty}>Party</div>
+                        <div className="higlightsMenuTags" onClick={this.handleAll}>All</div>
+                        <div className={ (this.state.tag ==='party') ? "higlightsMenuTagsActive" : "higlightsMenuTags"} onClick={this.handleParty}>Party</div>
                         <div className='higlightsMenuTags' onClick={this.handleActivities}>Activities</div>
                         <div className='higlightsMenuTags' onClick={this.handleSightseeing}>Sightseeing</div>
                     </div>
@@ -209,7 +209,7 @@ class HighlightsWrapper extends Component {
                     <div className='highlightsMenu'>
                         <div className='higlightsMenuTags' onClick={this.handleAll}>All</div>
                         <div className='higlightsMenuTags' onClick={this.handleParty}>Party</div>
-                        <div className='higlightsMenuTags' onClick={this.handleActivities}>Activities</div>
+                        <div className={ (this.state.tag ==='activities') ? "higlightsMenuTagsActive" : "higlightsMenuTags"} onClick={this.handleActivities}>Activities</div>
                         <div className='higlightsMenuTags' onClick={this.handleSightseeing}>Sightseeing</div>
                     </div>
                     <div className='wrapper'>
@@ -237,7 +237,7 @@ class HighlightsWrapper extends Component {
                         <div className='higlightsMenuTags' onClick={this.handleAll}>All</div>
                         <div className='higlightsMenuTags' onClick={this.handleParty}>Party</div>
                         <div className='higlightsMenuTags' onClick={this.handleActivities}>Activities</div>
-                        <div className='higlightsMenuTags' onClick={this.handleSightseeing}>Sightseeing</div>
+                        <div className={ (this.state.tag ==='sightseeing') ? "higlightsMenuTagsActive" : "higlightsMenuTags"} onClick={this.handleSightseeing}>Sightseeing</div>
                     </div>
                     <div className='wrapper'>
                         <div className='blockLeft'></div>
@@ -262,7 +262,7 @@ class HighlightsWrapper extends Component {
             return (
                 <div className='main'>
                     <div className='highlightsMenu'>
-                        <div className='higlightsMenuTags' onClick={this.handleAll}>All</div>
+                        <div className={ (this.state.tag ==='all') ? "higlightsMenuTagsActive" : "higlightsMenuTags"} onClick={this.handleAll}>All</div>
                         <div className='higlightsMenuTags' onClick={this.handleParty}>Party</div>
                         <div className='higlightsMenuTags' onClick={this.handleActivities}>Activities</div>
                         <div className='higlightsMenuTags' onClick={this.handleSightseeing}>Sightseeing</div>
