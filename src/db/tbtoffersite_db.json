@@ -1,0 +1,133 @@
+{
+    "highlightsArr" : [
+        {
+            "name" : "Wyjątkowe wybrzeże",
+            "image" : "./img/cliff-jumping.png",
+            "text" : "Wysokie kliffy, z których można skakać wprost do błękitnego i ciepłego morza",
+            "tag" : {
+                "party" : true,
+                "activities" : false,
+                "sightseeing" : false
+            }
+    
+        },
+        {
+            "name" : "Hvar",
+            "image" : "./img/hvar.png",
+            "text" : "Niepowtarzalna wyspa i miasto, które całe wpisane jest na listę dziedzictwa UNESCO",
+            "tag" : {
+                "party" : false,
+                "activities" : false,
+                "sightseeing" : true
+            }
+    
+        },
+        {
+            "name" : "Korcula",
+            "image" : "./img/korcula.png",
+            "text" : "Miejsce urodzenia Marco Polo i najbardziej słoneczna wyspa Chorwacji",
+            "tag" : {
+                "party" : false,
+                "activities" : false,
+                "sightseeing" : true
+            }
+    
+        },
+
+        {
+            "name" : "Wzgórza Pakelni",
+            "image" : "./img/pakelni-sunset.png",
+            "text" : "Najpiękniejszy zachód słońca w Chorwacji",
+            "tag" : {
+                "party" : false,
+                "activities" : true,
+                "sightseeing" : false
+            }
+    
+        },
+
+        {
+            "name" : "Palmizana",
+            "image" : "./img/palmizana.png",
+            "text" : "Przepiękna zatoka, idealna na leniwe śniadanie",
+            "tag" : {
+                "party" : false,
+                "activities" : true,
+                "sightseeing" : false
+            }
+    
+        },
+
+        {
+            "name" : "Peka",
+            "image" : "./img/peka.png",
+            "text" : "Ośmiornica lub mięso mieczone w specjalnym tradycyjnym naczyniu",
+            "tag" : {
+                "party" : false,
+                "activities" : true,
+                "sightseeing" : false
+            }
+    
+        },
+
+        {
+            "name" : "Owoce morza",
+            "image" : "./img/seafood.png",
+            "text" : "Świeże i pyszne owoce morza!",
+            "tag" : {
+                "party" : false,
+                "activities" : true,
+                "sightseeing" : false
+            }
+    
+        },
+
+        {
+            "name" : "Snorkling",
+            "image" : "./img/snorkling.png",
+            "text" : "Czysta woda, pozwala podziwiać dno i niezliczone gatunki kolorowych ryb",
+            "tag" : {
+                "party" : false,
+                "activities" : true,
+                "sightseeing" : false
+            }
+    
+        },
+        {
+            "name" : "Trogir",
+            "image" : "./img/trogir.png",
+            "text" : "Stare miasto wpisane niemal w całości na listę Światowego Dziedzictwa UNESCO",
+            "tag" : {
+                "party" : false,
+                "activities" : false,
+                "sightseeing" : true
+            }
+    
+        },
+        {
+            "name" : "White Party",
+            "image" : "./img/white-party.png",
+            "text" : "Przebierana impreza, gdzie wszyscy ubieramy się na biało!",
+            "tag" : {
+                "party" : true,
+                "activities" : false,
+                "sightseeing" : false
+            }
+    
+        },
+        {
+            "name" : "Pływanie we flocie",
+            "image" : "/img/yacht-round.png",
+            "text" : "Flota jachtów, wspólne przerwy i noclegi - niezapomniane przeżycie",
+            "tag" : {
+                "party" : true,
+                "activities" : false,
+                "sightseeing" : false
+            }
+    
+        }
+    
+]
+
+
+}

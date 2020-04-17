@@ -1,6 +1,6 @@
 .main {
   text-align: center;
-  height: 100vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11,23 +11,36 @@
   height: 200px;
 }
 
+.highlightsMenu {
+  display: flex;
+  align-items: start;
+}
+
+.higlightsMenuTags {
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+
+}
+
+.higlightsMenuTags:hover {
+  opacity: 0.7;
+  transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
 .title {
   font-size: 42px;
 }
 
 
-.highlight {
-  height: 200px;
-  width: 250px;
-  margin: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-
 .image-container {
-  vertical-align: middle;
-  display: inline-block;
+  display: flex;
+  align-items: start;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;

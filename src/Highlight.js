@@ -20,7 +20,6 @@ class Highlight extends Component {
     }
 
     render () {
-        console.log(this.state.showPopup);
 
         return (
         <div className='highlight'
